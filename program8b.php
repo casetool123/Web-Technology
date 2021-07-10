@@ -1,33 +1,56 @@
-<!DOCTYPE html>
-<html>
-<body>
-	<?php
-		function pr($a){
-			foreach ($a as $b) {
-				foreach ($b as $c) {
-					echo $c ." ";
-				}echo "<br>";
-			}echo "<br>";
-		}
-		$a = [[1,2,3],[4,5,6],[7,8,9]];
-		$b = [[7,8,9],[4,5,6],[1,2,3]];
-		echo "<b>First Matrix : </b><br>" ; pr($a);
-		echo "<b>Second Matrix : </b><br>"; pr($b);
-		for ($i=0; $i < 3; $i++)
-			for ($j=0; $j < 3; $j++)
-				$c[$i][$j] = $a[$j][$i];
-		echo "<b>Transpose Of First Matrix : </b><br>"; pr($c);
-		for ($i=0; $i < 3; $i++)
-			for ($j=0; $j < 3; $j++)
-				$c[$i][$j] = $a[$i][$j] + $b[$i][$j];
-		echo "<b>Addition Of Two Matrix : </b><br>"; pr($c);
-		for ($i=0; $i < 3; $i++)
-			for ($j=0; $j < 3; $j++){
-				$c[$i][$j] = 0;
-				for ($k=0; $k < 3; $k++)
-					$c[$i][$j] += $a[$i][$k] * $b[$k][$j];
-			}
-		echo "<b>Multiplication Of Two Matrix : </b><br>"; pr($c);
-	 ?>
-</body>
-</html>
+<?php
+
+$a = array(array(1,2,3),array(4,5,6),array(7,8,9));
+$b = array(array(7,8,9),array(4,5,6),array(1,2,3));
+
+$m=count($a);
+$n=count($a[2]);
+$p=count($b);
+$q=count($b[2]);
+
+echo "the first matrix :"."<br/>";
+for ($row = 0; $row < $m; $row++) 
+{
+	for ($col = 0; $col < $n; $col++)
+		echo " ".$a[$row][$col];
+	echo "<br/>";
+}
+echo "the second matrix :"."<br/>";
+for ($row = 0; $row < $p; $row++) {
+	for ($col = 0; $col < $q; $col++)
+		echo " ".$b[$row][$col];
+	echo "<br/>";
+}
+echo "the transpose for the first matrix is:"."<br/>"; 
+for ($row = 0; $row < $m; $row++) 
+{
+	for ($col = 0; $col < $n; $col++)
+		echo " ".$a[$col][$row];
+	echo "<br/>";
+}
+if(($m===$p) and ($n===$q)) {
+	echo "the addition of matrices is:"."<br/>";
+	for ($row = 0; $row < 3; $row++) {
+		for ($col = 0; $col < 3; $col++)
+			echo " ".$a[$row][$col]+$b[$row][$col]." "; echo "<br/>";
+	}
+}
+if($n===$p)
+{
+	echo " The multiplication of matrices: <br/>";
+	$result=array();
+	for ($i=0; $i < $m; $i++) {
+		for($j=0; $j < $q; $j++){
+			$result[$i][$j] = 0;
+	for($k=0; $k < $n; $k++)
+	$result[$i][$j] += $a[$i][$k] * $b[$k][$j];
+	}
+}
+
+for ($row = 0; $row < $m; $row++) {
+	for ($col = 0; $col < $q; $col++)
+		echo " ".$result[$row][$col];
+	echo "<br/>";
+	}
+} 
+?>
