@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/css" href="program5.css"?>
+<STUDENTDATA>
+	<STUDENT>
+		<USN>USN   : 1AY18CS012</USN>
+		<NAME>NAME : AMRITA GHOSH</NAME>
+		<COLLEGE>COLLEGE : AIT</COLLEGE>
+		<BRANCH>BRANCH :CSE</BRANCH>
+		<YEAR>YEAR : 2018</YEAR>
+		<EMAIL>E-MAIL : amritab.18.becs@acharya.ac.in</EMAIL>
+	</STUDENT>
+	<STUDENT>
+		<USN>USN : 1AY19CS002</USN>
+		<NAME>NAME : XYZ</NAME>
+		<COLLEGE>COLLEGE : AIT</COLLEGE>
+		<BRANCH>BRANCH :CSE</BRANCH>
+		<YEAR>YEAR : 2019</YEAR>
+		<EMAIL>E-MAIL : xyz@gmail.com</EMAIL>
+	</STUDENT>
+	<STUDENT>
+		<USN>USN   : 1AY20CS001</USN>
+		<NAME>NAME : ABC</NAME>
+		<COLLEGE>COLLEGE : AIT</COLLEGE>
+		<BRANCH>BRANCH :CSE</BRANCH>
+		<YEAR>YEAR : 2020</YEAR>
+		<EMAIL>E-MAIL : abc@gmail.com</EMAIL>
+	</STUDENT>
+</STUDENTDATA>
