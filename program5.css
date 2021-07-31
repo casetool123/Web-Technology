@@ -6,3 +6,8 @@ USN {
     font-size: 30px;
     margin-top: 20px;
 }
+
+NAME {
+	color:red;
+	font-family: Arial, Helvetica, sans-serif;
+}
